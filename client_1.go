@@ -34,7 +34,7 @@ func main() {
 	t, err := c.NewTX()
 	fmt.Printf("NewTX returned: %v, %v\n", t, err)
 
-	testcase := 3
+	testcase := 1
 	switch testcase {
 	case 1:
 		// No failures, 1-client, non-aborting txns
@@ -46,14 +46,14 @@ func main() {
 		success1, err := t.Put("My", "name")
 		fmt.Printf("Put returned: %v, %v\n", success1, err)
 
-		success, v, err := t.Get("hello")
-		fmt.Printf("Get returned: %v, %v, %v\n", success, v, err)
+		success2, v, err := t.Get("hello")
+		fmt.Printf("Get returned: %v, %v, %v\n", success2, v, err)
 
-		t.Abort()
-		fmt.Println("Abort")
+		//t.Abort()
+		//fmt.Println("Abort")
 
-		//success, txID, err := t.Commit()
-		//fmt.Printf("Commit returned: %v, %v, %v\n", success, txID, err)
+		success3, txID, err := t.Commit()
+		fmt.Printf("Commit returned: %v, %v, %v\n", success3, txID, err)
 	case 2:
 		// No failures, n-clients, conflicting txns
 
