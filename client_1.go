@@ -34,7 +34,7 @@ func main() {
 	t, err := c.NewTX()
 	fmt.Printf("NewTX returned: %v, %v\n", t, err)
 
-	testcase := 1
+	testcase := 3
 	switch testcase {
 	case 1:
 		// No failures, 1-client, non-aborting txns
