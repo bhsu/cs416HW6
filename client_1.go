@@ -24,8 +24,8 @@ func main() {
 /*	nodes = append(nodes, "127.0.0.1:2020")
 	nodes = append(nodes, "127.0.0.1:7070")*/
 
-	nodes = append(nodes, "52.233.47.55:2020")
-	nodes = append(nodes, "40.69.68.166:6060")
+	nodes = append(nodes, "52.233.40.23:2020")
+	nodes = append(nodes, "52.164.227.209:6060")
 
 
 	c := kvservice.NewConnection(nodes)
